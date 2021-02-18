@@ -1,16 +1,50 @@
-body{
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=WorkSans&display=swap');
+body {
+    background-color: #2b313b;
     text-align: center;
     color: blue;
     margin-left: 100px;
     margin-right: 100px;
 }
-p{
+
+p {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-style: light;
+    font-size: 15px;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    color: rgba(0, 0, 0, 0.8);
+    -webkit-font-smoothing: antialiased;
     text-align: left;
-    color: blueviolet;
+    color: rgb(168, 241, 229);
 }
-button{
+
+button {
     text-align: left;
 }
-a{
-    color: cornflowerblue;
+
+a {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-style: light;
+    font-size: 15px;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    color: rgba(0, 0, 0, 0.8);
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+    color: rgb(216, 173, 245);
+}
+
+h1 {
+    font-family: 'WorkSans';
+    font-weight: 500;
+    font-style: light;
+    font-size: 30px;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    color: rgba(207, 223, 163, 0.8);
+    -webkit-font-smoothing: antialiased;
 }
