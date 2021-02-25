@@ -16,6 +16,8 @@ button {
 }
 
 a {
+    color: transparent;
+    text-shadow: 0 0 15px rgba(135, 238, 203, 0.5);
     font-family: 'Roboto';
     font-weight: 500;
     font-style: light;
