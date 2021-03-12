@@ -36,14 +36,14 @@ Particle.prototype.run = function() {
 Particle.prototype.update = function() {
     this.velocity.add(this.acceleration);
     this.position.add(this.velocity);
-    this.lifespan -= .01;
+    this.lifespan -= .3;
 };
 
 // Method to display
 Particle.prototype.display = function() {
     stroke(1, this.lifespan);
     strokeWeight(0);
-    fill(200, this.lifespan);
+    fill(150, this.lifespan);
     ellipse(this.position.x, this.position.y, 1.5, 1.5);
 };
 

@@ -3,11 +3,9 @@
 body {
     overflow-x: hidden;
     overflow-y: hidden;
-    /*
     margin-top: 20%;
     margin-left: 25px;
     margin-right: 25px;
-    */
     text-align: center;
     color: blue;
 }
