@@ -55,9 +55,6 @@ h1 {
 
 div {
     margin-top: 20%;
-    animation: blur 3s ease 0s infinite;
-    -webkit-animation: blur 4s ease 0s infinite;
-    -moz-animation: blur 4s ease 0s infinite;
 }
 
 p {
@@ -72,20 +69,4 @@ p {
     letter-spacing: -.02em;
     color: rgba(48, 138, 126, 0.8);
     -webkit-font-smoothing: antialiased;
-}
-
-@keyframes blur {
-    0%,
-    90% {
-        -webkit-filter: blur(0px);
-        -moz-filter: blur(0px);
-        -o-filter: blur(0px);
-        -ms-filter: blur(0px);
-    }
-    50% {
-        -webkit-filter: blur(2px);
-        -moz-filter: blur(2px);
-        -o-filter: blur(2px);
-        -ms-filter: blur(2px);
-    }
 }
