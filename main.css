@@ -11,7 +11,18 @@ body {
 }
 
 button {
-    text-align: left;
+    background-color: #000000;
+    color: transparent;
+    text-shadow: 0 0 15px rgba(0, 255, 170, 0.644);
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-style: light;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    color: rgba(0, 0, 0, 0.8);
+    -webkit-font-smoothing: antialiased;
+    color: rgb(168, 247, 192);
 }
 
 a {
