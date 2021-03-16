@@ -1,3 +1,8 @@
+let x, y;
+let c;
+let down;
+let stars = [];
+let sky = 0;
 let system;
 var canvas;
 
@@ -5,68 +10,56 @@ function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
 }
 
-
 function setup() {
     canvas = createCanvas(windowWidth, windowHeight);
     canvas.position(0, 0);
     canvas.style("z-index", "-1");
-    system = new ParticleSystem(createVector(width / 2, height / 2));
+    createCanvas(windowWidth, windowHeight);
+    x = width / 2;
+    y = height / 2;
+    c = 255;
+
+    for (let i = 0; i < 1000; i++) {
+        stars[i] = new Star(random(width), random(height), random(255), random(0.1, 3), random(1));
+    }
 }
 
 function draw() {
-    background(38, 35, 35);
-    system.addParticle();
-    system.run();
+    background(sky);
+    for (let i = 0; i < stars.length; i++) {
+        stars[i].twinkle();
+        stars[i].showStar();
+    }
+    //sky = map(mouseY, 0,height, 0,255);
 }
 
-// A simple Particle class
-let Particle = function(position) {
-    this.acceleration = createVector(0, 0);
-    this.velocity = createVector(random(-1, 1), random(-1, 1));
-    this.position = position.copy();
-    this.lifespan = 255;
-};
 
-Particle.prototype.run = function() {
-    this.update();
-    this.display();
-};
+class Star {
+    constructor(tx, ty, tc, tf, td) {
+        this.x = tx;
+        this.y = ty;
+        this.c = tc;
+        this.f = tf;
+        this.down = td;
+    }
 
-// Method to update position
-Particle.prototype.update = function() {
-    this.velocity.add(this.acceleration);
-    this.position.add(this.velocity);
-    this.lifespan -= .3;
-};
+    showStar() {
+        stroke(this.c)
+        point(this.x, this.y);
+    }
 
-// Method to display
-Particle.prototype.display = function() {
-    stroke(1, this.lifespan);
-    strokeWeight(0);
-    fill(150, this.lifespan);
-    ellipse(this.position.x, this.position.y, 1.5, 1.5);
-};
+    twinkle() {
+        if (this.c >= 255) {
+            this.down = true;
+        }
+        if (this.c <= 0) {
+            this.down = false;
+        }
 
-// Is the particle still useful?
-Particle.prototype.isDead = function() {
-    return this.lifespan < 0;
-};
-
-let ParticleSystem = function(position) {
-    this.origin = position.copy();
-    this.particles = [];
-};
-
-ParticleSystem.prototype.addParticle = function() {
-    this.particles.push(new Particle(this.origin));
-};
-
-ParticleSystem.prototype.run = function() {
-    for (let i = this.particles.length - 1; i >= 0; i--) {
-        let p = this.particles[i];
-        p.run();
-        if (p.isDead()) {
-            this.particles.splice(i, 1);
+        if (this.down) {
+            this.c -= this.f
+        } else {
+            this.c += this.f
         }
     }
-};
+}

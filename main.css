@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=WorkSans&display=swap');
 body {
+    background: rgb(0, 0, 0);
     overflow-x: hidden;
     overflow-y: hidden;
     margin-top: 0%;
     margin-left: 25px;
     margin-right: 25px;
     text-align: center;
-    color: blue;
 }
 
 button {
@@ -16,7 +16,7 @@ button {
 
 a {
     color: transparent;
-    text-shadow: 0 0 15px rgba(135, 238, 203, 0.5);
+    text-shadow: 0 0 15px rgba(0, 255, 170, 0.644);
     font-family: 'Roboto';
     font-weight: 500;
     font-style: light;
@@ -31,7 +31,7 @@ a {
 
 h1 {
     color: transparent;
-    text-shadow: 0 0 15px rgba(135, 238, 203, 0.5);
+    text-shadow: 0 0 15px rgba(0, 255, 170, 0.644);
     font-family: 'WorkSans';
     font-weight: 500;
     font-style: light;
@@ -52,7 +52,7 @@ div {
 p {
     text-align: center;
     color: transparent;
-    text-shadow: 0 0 5px rgba(135, 238, 203, 0.5);
+    text-shadow: 0 0 5px rgba(0, 255, 170, 0.644);
     font-family: 'Roboto';
     font-weight: 500;
     font-style: light;
